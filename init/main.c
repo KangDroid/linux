@@ -831,7 +831,8 @@ asmlinkage __visible void __init start_kernel(void)
 {
 	char *command_line;
 	char *after_dashes;
-
+    pr_notice("KangDroid Kernel Initiated![Using PR_NOTICE]\n");
+    printk("KangDroid Kernel Initiated![Using printk]\n");
 	set_task_stack_end_magic(&init_task);
 	smp_setup_processor_id();
 	debug_objects_early_init();
